@@ -1,0 +1,2 @@
+rpaframework==19.4.1
+better-abc==0.0.3
