@@ -1,5 +1,9 @@
 # Work-Queue
 Python multi-threaded queue management system which can be used for a variety of purposes including web automation.
+It leverages the Python queue module, which implements three types of queues: 
+1. FIFO (First In, First Out)
+2. LIFO (Last In, First Out)
+3. Priority Queue
 
 User Guide
 -----------
@@ -8,6 +12,6 @@ First steps to start using:
 
 1. Configure threading parameters and add custom parameters to the setting.conf file
 
-2. Define processing method inside Process.py or use the default processing methods
+2. Define a processing method inside Process.py or use the default processing methods
 
-3. Run main.py
+3. Running main.py will generate data in the data folder by default
