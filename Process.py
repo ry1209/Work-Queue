@@ -17,7 +17,10 @@ class WorkItem:
     )
 
 class ProcessingMethod(ABC):
-
+    '''
+    ProcessingMethod abstract base class, users should create their own processing method by 
+    following this template
+    '''
     def grab_input_item_data(self, item) -> Tuple[int,dict]:
         return item.id, item.payload
 
@@ -30,6 +33,9 @@ class ProcessingMethod(ABC):
         raise NotImplementedError
 
 class DefaultProcessingMethod(ProcessingMethod):
+    '''
+    Default processing method: simply outputs numbers from 1 to 10 to the work item payload
+    '''
     def create_payload(self) -> List[dict]:
         payload = []
         for i in range(1,10):
@@ -45,6 +51,9 @@ class DefaultProcessingMethod(ProcessingMethod):
         return item.id, {'data':item.id}
 
 class GoScraperBackendProcessingMethod(ProcessingMethod):
+    '''
+    Default processing method:  A website scraper for go rankings using a simple HTTP GET request
+    '''
     def create_payload(self) -> List[dict]: 
         payload = []
         # grab top 50 players
@@ -65,6 +74,9 @@ class GoScraperBackendProcessingMethod(ProcessingMethod):
         }
 
 class GoScraperFrontendProcessingMethod(ProcessingMethod):
+    '''
+    Default processing method:  A website scraper for go rankings leveraging Selenium UI automation
+    '''
     def create_payload(self) -> List[dict]: 
         payload = []
         # grab top 10 players 
