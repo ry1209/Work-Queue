@@ -10,4 +10,4 @@ First steps to start using:
 
 2. Define a processing method inside Process.py or use the default processing methods
 
-3. Run main.py
+3. Running main.py will generate data in the data folder by default
