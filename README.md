@@ -1,5 +1,5 @@
 # Work-Queue
-Python multi-threaded queue management system which can be used for a variety of purposes including web automation.
+Python multi-threaded queue management system that contains any number of work items which are passed out to consuming processes in order of priority. This can be used for any automation purposes including web automation.
 It leverages the Python queue module, which implements three types of queues: 
 1. FIFO (First In, First Out)
 2. LIFO (Last In, First Out)
