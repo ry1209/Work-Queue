@@ -3,7 +3,7 @@ from Process import DefaultProcessingMethod, GoScraperBackendProcessingMethod, G
 
 def main():
     work_queue = WorkQueue(
-        item_manager=ConcurrentItemManager(processing_method=GoScraperBackendProcessingMethod())
+        item_manager=ConcurrentItemManager(processing_method=GoScraperFrontendProcessingMethod())
     )
     work_queue.create_work_queue()
     work_queue.process()

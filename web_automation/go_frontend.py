@@ -12,7 +12,7 @@ class GoActionsElements:
 @dataclass
 class GoBase:
     
-    headless: Optional[bool] = True
+    headless: Optional[bool] = False
 
     def __post_init__(self):
         self.go_url = config['GO']['go_rating_webpage']
