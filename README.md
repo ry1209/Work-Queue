@@ -14,4 +14,4 @@ First steps to start using:
 
 2. Define a processing method inside Process.py or use the default processing methods
 
-3. Running main.py will generate data in the data folder by default
+3. Executing the main.py script will process the input data and generate output data in the "data" folder
