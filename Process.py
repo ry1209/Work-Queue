@@ -1,8 +1,21 @@
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import Optional, List, Tuple
 from abc import ABC, abstractmethod
 from web_automation.go_frontend import GoActions
 from web_automation.go_backend import GoWeb
+
+class State(Enum):
+    """Work item state."""
+
+    DONE = "COMPLETED"
+    FAILED = "FAILED"
+
+class Error(Enum):
+    """Failed work item error type."""
+
+    BUSINESS = "BUSINESS"  
+    APPLICATION = "APPLICATION" 
 
 @dataclass
 class WorkItem:

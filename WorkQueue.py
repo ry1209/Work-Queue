@@ -1,4 +1,3 @@
-from enum import Enum
 from abc import ABC, abstractmethod
 from better_abc import abstract_attribute
 import threading
@@ -9,19 +8,7 @@ from datetime import datetime
 import os
 import json
 from Config import config
-from Process import ProcessingMethod, WorkItem
-
-class State(Enum):
-    """Work item state."""
-
-    DONE = "COMPLETED"
-    FAILED = "FAILED"
-
-class Error(Enum):
-    """Failed work item error type."""
-
-    BUSINESS = "BUSINESS"  
-    APPLICATION = "APPLICATION" 
+from Process import ProcessingMethod, WorkItem, State, Error
 
 class ItemManager(ABC):
     
